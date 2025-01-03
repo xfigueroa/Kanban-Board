@@ -1,5 +1,4 @@
 import { useState, FormEvent, ChangeEvent } from "react";
-
 import Auth from '../utils/auth';
 import { login } from "../api/authAPI";
 
@@ -28,7 +27,7 @@ const Login = () => {
   };
 
   return (
-    <div className='container'>
+    <div className='form-container'>
       <form className='form' onSubmit={handleSubmit}>
         <h1>Login</h1>
         <label >Username</label>
