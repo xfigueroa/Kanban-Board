@@ -241,3 +241,7 @@ tbody tr:nth-child(odd) {
   align-items: center;
   justify-content: center;
 }
+
+.error-massage {
+  color: red;
+}

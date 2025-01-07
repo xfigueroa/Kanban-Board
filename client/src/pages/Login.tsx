@@ -8,6 +8,8 @@ const Login = () => {
     password: ''
   });
 
+  const [errorMassage, setErrorMassage] = useState('');
+
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setLoginData({
@@ -23,6 +25,7 @@ const Login = () => {
       Auth.login(data.token);
     } catch (err) {
       console.error('Failed to login', err);
+      setErrorMassage('Failed to login, Please check your username and password.');
     }
   };
 
@@ -44,6 +47,7 @@ const Login = () => {
           value={loginData.password || ''}
           onChange={handleChange}
         />
+        {errorMassage && <p className="error-massage">{errorMassage}</p>}
         <button type='submit'>Submit Form</button>
       </form>
     </div>

@@ -62,7 +62,7 @@ class AuthService {
       console.error('Failed to remove token from local storage', err  );
     }
     // TODO: redirect to the login page
-    window.location.assign('/login');
+    window.location.assign('/');
   }
 }
 
